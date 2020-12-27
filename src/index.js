@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import '/home/d239liu/work/react_web/src/comp2/css/Card2.css'
+import './comp2/css/Card2.css'
 
 ReactDOM.render(
   <React.StrictMode>
