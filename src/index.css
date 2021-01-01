@@ -48,6 +48,12 @@ code {
   background-color: #f0ffff
 }
 
+.hero_intro {
+  font-size:30px;
+  z-index:1;
+}
+
+
 .block{
   border-bottom: 1px solid rgba(255, 255, 255, .3);
   height:30vw;
@@ -113,3 +119,59 @@ code {
 .intro2 body{
   text-indent: 40px;
 }
+
+
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  padding: 1em 2em;
+  background: #6495ED;
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 500;
+  border: none;
+  padding: 1em 2em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.5em;
+}
+
+.button_x {
+  display: inline-block;
+  padding: 1em 2em;
+  background: #6495ED;
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 500;
+  border: none;
+  padding: 1em 2em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.5em;
+}
+
+span {
+  z-index: 2;
+  position: relative;
+}
+
+.glance {
+  background: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateY(50%);
+}
+

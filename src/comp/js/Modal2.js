@@ -94,14 +94,9 @@ export const Modal = ({ showModal, setShowModal, props }) => {
                     <animated.div style={animation}>
                         <ModalWrapper showModal={showModal}>
                             <ModalContent>
-                                <h1>Test txt</h1>
-                                <p>Content here</p>
-                                <button>Read More</button>
+                                <h1>{props.title}</h1>
+                                <p>{props.content}</p>
                             </ModalContent>
-                            <CloseModalButton
-                                aria-label='Close modal'
-                                onClick={showModal = false}
-                            />
                         </ ModalWrapper >
                     </animated.div>
                 </Background>

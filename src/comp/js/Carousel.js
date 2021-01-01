@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from '../../comp/js/Card'
+import { Modal2 } from '../../comp/js/Modal2.js'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 
@@ -32,58 +33,35 @@ class Carousel extends React.Component {
             items: [
                 {
                     id: 0,
-                    title: 'Tech for Teletherapy',
-                    text: 'Improving online speech therapy',
+                    text: 'I am studying statistics at University of Waterloo',
                     selected: false,
-                    imgSrc: profile,
-                    showModal: true
+                    showModal: false
                 },
 
                 {
                     id: 1,
-                    title: 'NIST V1',
-                    text: 'Raspberry Pi verion',
+                    text: 'I am an aspiring programmer',
                     selected: false,
-                    imgSrc: NIST,
                     showModal: false
                 },
 
                 {
                     id: 2,
-                    title: 'NIST V2',
-                    text: 'Android mobile version',
+                    text: 'I am a history buff',
                     selected: false,
-                    imgSrc: orientation,
+                    showModal: false
+                }
+
+                {
+                    id: 3,
+                    text: 'I am a cooking enthusiast',
+                    selected: false,
                     showModal: false
                 }
 
             ]
 
         }
-
-    }
-    openModal = (id, card) => {
-        let items = [...this.state.items];
-
-        items[id].selected = items[id].seleted ? false : true;
-
-        items.forEach(item => {
-            if (item.id !== id) {
-                item.selected = false;
-            }
-        });
-
-        this.setState({
-            items        })
-
-        this.setState(prevState => {
-            return {
-                
-                showModal: !prevState
-            }
-
-        })
-
 
     }
 
@@ -113,7 +91,7 @@ class Carousel extends React.Component {
         // give it an onclick event with e
 
         return items.map(item => {
-            return <Card item={item} click={(e => this.handleCardClick(item.id, e))} key={item.id} />
+            return <Slide item={item} click={(e => this.handleCardClick(item.id, e))} key={item.id} />
         })
     }
     render() {
