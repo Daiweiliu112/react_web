@@ -1,6 +1,9 @@
 import React from 'react'
 import ReactPlayer from "react-player"
 
+import { VscGithubInverted } from 'react-icons/vsc';
+
+
 
 
 
@@ -37,6 +40,7 @@ function Project2() {
                         <ul>
                             <li>Designed and transitioned the old Python interface to the current interface</li>
                             <li>Comsetic changes such as moving background and animated splash screen</li>
+                            <li><a href = "https://github.com/Daiweiliu112/NIST-Android.git" target="_blank" rel="noopener noreferrer"><VscGithubInverted/> Check out the repository.</a></li>
                         </ul>
                     </body>
                 </div>

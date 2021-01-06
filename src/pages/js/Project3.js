@@ -11,6 +11,9 @@ import box_front from '../../imgs/box_front.jpg'
 import box_side from '../../imgs/box_side.jpg'
 import box_trans from '../../imgs/box_transparent.jpg'
 
+import { VscGithubInverted } from 'react-icons/vsc';
+
+
 
 function Project3() {
     return (
@@ -44,6 +47,10 @@ function Project3() {
                             <li>Built the researcher interface to allow customization without the need to code.</li>
                             <li>Set up MySQL databse to allow question creation and customization.</li>
                             <li>Built the user interface for data collection into the MySQL database.</li>
+                            <li><a href="https://github.com/Daiweiliu112/NIST.git" target="_blank" rel="noopener noreferrer">
+                                <VscGithubInverted /> Check out the repository here.
+                             </a></li>
+
                         </ul>
                     </body>
                 </div>
@@ -121,9 +128,9 @@ function Project3() {
 
             </div>
 
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
 
 
             <div style={{
@@ -191,7 +198,7 @@ function Project3() {
                         <body>
                             The Raspberry Pi version comes with it's own hardware. It is a box 3D printed to house the Raspberry Pi
                             and a touch screen. The top of the box are tube holders for sample collection. Each tube will have a RFID sticker
-                            which will trigger a RFID scanner whenever the test subject carries out a test. This way, the device can record 
+                            which will trigger a RFID scanner whenever the test subject carries out a test. This way, the device can record
                             the time stamp and the tube ID for data collection.
                         </body>
                     </div>

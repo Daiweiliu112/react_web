@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactPlayer from "react-player"
+import { VscGithubInverted } from 'react-icons/vsc';
+
 
 
 function Project1() {
@@ -27,6 +29,9 @@ function Project1() {
                             <li>Managing the django database and server</li>
                             <li>Supervision of team member's code for successful integration</li>
                             <li>Created the customization function for the web application</li>
+                            <li><a href="https://github.com/Daiweiliu112/Neuro-Nexus-Hackathon.git" target="_blank" rel="noopener noreferrer">
+                                <VscGithubInverted /> Check out the repository here.
+                             </a></li>
                         </ul>
 
                     </body>
@@ -45,7 +50,7 @@ function Project1() {
                 justifyContent: 'center',
             }}>
                 <ReactPlayer
-                    url = 'https://youtu.be/zHXHlL4x61o'
+                    url='https://youtu.be/zHXHlL4x61o'
                     width={800}
                     height={600}
                 />

@@ -9,7 +9,7 @@ function CardItem(props) {
                 <Link className='cards_item_link' to={props.path}>
                     <figure className='cards_item_pic-wrap' data-category={props.label}>
                         <img
-                            alt='Travel Image'
+                            alt='Project Image'
                             className='cards_item_img'
                             src={props.src}
                         />

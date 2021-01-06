@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import Carditems from '../../comp2/js/Carditems.js'
 import '../../comp2/css/Card2.css'
 import t4t from '../../imgs/ActualLogo.jpg'
@@ -7,69 +7,74 @@ import logo50 from '../../imgs/logo50.png'
 import orientation from '../../imgs/orientation.png'
 import math_formal from '../../imgs/math_formal.jpg'
 import I4H from '../../imgs/I4H_group.jpg'
+import ww2_data_china2 from '../../imgs/ww2_data_china2.jpg'
+import Modal3 from '../../comp/js/Modal3.js'
+import web_profile3 from '../../imgs/web_profile3.png'
 
 function Card2() {
+    const [showModal3, setShowModal3] = useState(false);
+
+    const openModal3 = () => {
+        setShowModal3(prev => !prev);
+    };
     return (
-        <div className='cards'>
-            <h1>Here are my projects!</h1>
-            <div className="cards_container">
-                <div className='cards_wrapper'>
-                    <ul className='cards_items'>
-                        <Carditems
-                            src={t4t}
-                            title="Tech for Teletherapy"
-                            text="Speech Therapy Web Application"
-                            label='Python Django, Javascript'
-                            path="/Project1" />
+        <div>
+            <Modal3 showModal3={showModal3} setShowModal3={setShowModal3} />
 
-                        <Carditems
-                            src={NIST}
-                            title="NIST Android"
-                            text="Non-Invasive Sampling Technology"
-                            label='Android Studio, Java'
-                            path="/Project2" />
+            <div className='cards'>
+                <h1>Hackathon Projects</h1>
+                <div className="cards_container">
+                    <div className='cards_wrapper'>
+                        <ul className='cards_items'>
+                            <Carditems
+                                src={t4t}
+                                title="Tech for Teletherapy"
+                                text="Speech Therapy Web Application"
+                                label='Python Django, Javascript'
+                                path="/Project1" />
 
-                        <Carditems
-                            src={logo50}
-                            title="NIST Raspberry Pi"
-                            text="Non-Invasive Sampling Technology"
-                            label='Python Kivy, MySQL'
-                            path="/Project3" />
-                    </ul>
+                            <Carditems
+                                src={NIST}
+                                title="NIST Android"
+                                text="Non-Invasive Sampling Technology"
+                                label='Android Studio, Java'
+                                path="/Project2" />
+
+                            <Carditems
+                                src={logo50}
+                                title="NIST Raspberry Pi"
+                                text="Non-Invasive Sampling Technology"
+                                label='Python Kivy, MySQL'
+                                path="/Project3" />
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
 
-            <h1>Some of my other fun experiences!</h1>
-            <div className="cards_container">
-                <div className='cards_wrapper'>
-                    <ul className='cards_items'>
-                        <Carditems
-                            src={orientation}
-                            title="UW Orientation"
-                            text="University of Waterloo"
-                            label='Event Planner, Team Leader'
-                            path="#" />
+                <h1>Personal Projects</h1>
+                <div className="cards_container">
+                    <div className='cards_wrapper'>
+                        <ul className='cards_items'>
+                            <Carditems
+                                src={ww2_data_china2}
+                                title="WW2 Data"
+                                text="Visualization of WW2 casualties in Chinese Theater"
+                                label='R, Rstudio'
+                                path="/History" />
 
-                        <Carditems
-                            src={math_formal}
-                            title="Neuro Nexus"
-                            text="Calgary Hackathon"
-                            label='Partcipant, Software Lead'
-                            path="#" />
-
-                        <Carditems
-                            src={I4H}
-                            title="Innovation for Health"
-                            text="Calgary Hackathon"
-                            label='Participant, Software Team'
-                            path="#" />
-                    </ul>
+                            <Carditems 
+                                src={web_profile3}
+                                title="My Websites"
+                                text="My first and second website"
+                                label='React, HTML, CSS, Javscript'
+                                path="/Websites" />
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

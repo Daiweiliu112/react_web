@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import { VscGithubInverted } from 'react-icons/vsc';
+import { GrLinkedin } from 'react-icons/gr';
 
 
 
@@ -17,6 +19,10 @@ import Home from './pages/js/Home.js';
 import Project1 from './pages/js/Project1.js';
 import Project2 from './pages/js/Project2.js';
 import Project3 from './pages/js/Project3.js';
+import UW from './pages/js/UW.js';
+import Programmer from './pages/js/Programmer.js';
+import History from './pages/js/History.js';
+import Websites from './pages/js/Websites.js';
 
 
 
@@ -77,20 +83,30 @@ class App extends React.Component {
               <Navbar.Brand > David Liu </Navbar.Brand>
               <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="/Project1">Project 1</Link>
-                <Link className="nav-link" to="/Project2">Project 2</Link>
-                <Link className="nav-link" to="/Project3">Project 3</Link>
-                <Link className="nav-link" to="/Contact ">Contact</Link>
+                <Link className="nav-link" to="/Github"><VscGithubInverted /></Link>
+                <Link className="nav-link" to="/Linkedin"><GrLinkedin /></Link>
               </Nav>
 
 
             </Navbar>
             <Switch>
               <Route path="/" exact component={Home} />
-              <Route path="/Contact" exact render={() => <Contact title={this.state.contact.title} />} />
               <Route path="/Project1" component={Project1} />
-              <Route path="/Project2" component={Project2}/>
-              <Route path="/Project3" component={Project3}/>
+              <Route path="/Project2" component={Project2} />
+              <Route path="/Project3" component={Project3} />
+              <Route path="/UW" component={UW} />
+              <Route path="/Programmer" component={Programmer} />
+              <Route path="/History" component={History} />
+              <Route path='/Github' component={() => {
+                window.location.replace('https://github.com/Daiweiliu112');
+                return null;
+              }} />
+              <Route path='/Linkedin' component={() => {
+                window.location.replace('https://linkedin.com/in/daiweiliu112/');
+                return null;
+              }} />
+              <Route path ='/Websites' component={Websites}/>
+
             </Switch>
             <Footer />
 
